@@ -31,24 +31,42 @@ app_port: 5000
 
 ```
 Flask==2.3.2
-pandas==2.0.3
-numpy==1.24.3
+pandas==2.3.3
+numpy==2.3.4
 openpyxl==3.1.2
 gunicorn==20.1.0
 ```
 
 ## 使用方法
 
-### 本地运行
-1. 安装依赖：
+### 设置Python虚拟环境（推荐）
+1. 创建虚拟环境：
+   ```bash
+   python -m venv venv
+   ```
+2. 激活虚拟环境：
+   ```bash
+   # Windows
+   source venv/Scripts/activate
+
+   # macOS/Linux
+   source venv/bin/activate
+   ```
+3. 安装依赖：
    ```bash
    pip install -r requirements.txt
    ```
-2. 启动应用：
+
+### 本地运行
+1. 启动应用：
    ```bash
    python app.py
    ```
-3. 访问 http://localhost:5000
+   或者使用Flask命令：
+   ```bash
+   flask run
+   ```
+2. 访问 http://localhost:5000
 
 ### Docker运行
 1. 构建镜像：
